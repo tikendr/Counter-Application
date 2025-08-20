@@ -1,0 +1,34 @@
+<div class="container counter-wrapper">
+<div class="row">
+  <div class="col-md-12 col-12 mt-3">
+    <mat-form-field appearance="fill">
+     <input matInput type="text" [(ngModel)]="count" (ngModelChange)="updateHistory()" placeholder="{{count}}">
+    </mat-form-field>
+    <div class="row mt-3">
+      <div class="col-md-4 col-4 text-center">
+        <button class="btn btn-success" (click)="increment()">Increment<mat-icon class="align-middle">add</mat-icon></button>
+      </div>
+      <div class="col-md-4 col-4 text-center">
+        <button class="btn btn-danger" (click)="decrement()">Decrement<mat-icon class="align-middle">remove</mat-icon></button>
+      </div>
+      <div class="col-md-4 col-4 text-center">
+        <button class="btn btn-warning" (click)="reset()">Reset<mat-icon class="align-middle">refresh</mat-icon></button>
+      </div>
+    </div>
+    <div class="row mt-3">
+       <div class="col-12">
+        <ul class="p-0">
+          <li *ngFor="let h of history">
+              Counter is now {{h}}
+          </li>
+        </ul>
+       </div>
+ <div class="row">
+<div class="col-4">
+ <button class="btn btn-secondary" (click)="clear()">Clear History</button>
+</div>
+ </div>
+    </div>
+</div>
+</div>
+</div>
